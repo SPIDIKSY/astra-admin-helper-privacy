@@ -1,1 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Astra Admin Helper Pro</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f1117;
+      color: #c9d1d9;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 3rem 3.5rem;
+    }
+
+    /* ── Language switcher ── */
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid #30363d;
+      color: #8b949e;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .lang-btn:hover { border-color: #58a6ff; color: #58a6ff; }
+
+    .lang-btn.active {
+      background: #1f6feb;
+      border-color: #1f6feb;
+      color: #fff;
+    }
+
+    /* ── Typography ── */
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #e6edf3;
+      margin-bottom: 0.3rem;
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: #8b949e;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #21262d;
+      padding-bottom: 1.2rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #e6edf3;
+      margin: 2rem 0 0.6rem;
+    }
+
+    p { margin-bottom: 0.9rem; }
+
+    ul {
+      padding-left: 1.4rem;
+      margin-bottom: 0.9rem;
+    }
+
+    ul li { margin-bottom: 0.35rem; }
+
+    .badge {
+      display: inline-block;
+      background: #1f6feb22;
+      border: 1px solid #1f6feb55;
+      color: #58a6ff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.15rem 0.55rem;
+      border-radius: 20px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+
+    .highlight {
+      background: #0d1117;
+      border-left: 3px solid #238636;
+      padding: 0.8rem 1rem;
+      border-radius: 0 6px 6px 0;
+      margin: 1rem 0;
+      font-size: 0.93rem;
+      color: #3fb950;
+    }
+
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      padding: 0.55rem 0.8rem;
+      text-align: left;
+      border: 1px solid #30363d;
+    }
+
+    th {
+      background: #21262d;
+      color: #e6edf3;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) td { background: #0d1117; }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #21262d;
+      font-size: 0.82rem;
+      color: #8b949e;
+    }
+
+    /* ── Language sections ── */
+    [data-lang] { display: none; }
+    [data-lang].active { display: block; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Language switcher -->
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('en')" id="btn-en">🇬🇧 EN</button>
+    <button class="lang-btn" onclick="setLang('ru')" id="btn-ru">🇷🇺 RU</button>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       ENGLISH VERSION
+  ══════════════════════════════════════ -->
+  <div data-lang="en" class="active">
+
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <strong>Astra Admin Helper Pro</strong> &nbsp;·&nbsp;
+      Extension ID: <code>ofdiekkomjacbkaeoommjffdnglndhkg</code> &nbsp;·&nbsp;
+      Last updated: May 19, 2025
+    </div>
+
+    <h2>1. Overview</h2>
+    <p>
+      Astra Admin Helper Pro ("the Extension") is a browser extension designed exclusively for
+      internal use by authorized moderators and administrators of the
+      <strong>Astra Manga</strong> platform (<a href="https://astramanga.org" target="_blank">astramanga.org</a>).
+      Its purpose is to automate repetitive moderation tasks such as auto-filling manga metadata
+      fields, parsing public data from manga aggregator websites, and enforcing in-house editorial rules.
+    </p>
+    <div class="highlight">
+      ✔ The Extension does <strong>not</strong> collect, transmit, sell, or share any personal
+      information about end users. All data it handles is either public manga catalog data or
+      locally stored operational settings.
+    </div>
+
+    <h2>2. Data Collected &amp; How It Is Used</h2>
+
+    <h2>2.1 Data stored locally on your device <span class="badge">Local only</span></h2>
+    <p>
+      The Extension stores the following data exclusively in
+      <code>chrome.storage.local</code> (and <code>localStorage</code> as a fallback).
+      This data <strong>never leaves your device</strong> and is not transmitted to any server.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>What it contains</th>
+          <th>Purpose</th>
+          <th>Retention</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>am_ext__panel_state</code></td>
+          <td>Panel width, height, scale, minimized flag</td>
+          <td>Restore UI panel position &amp; size across page loads</td>
+          <td>Until user resets or uninstalls</td>
+        </tr>
+        <tr>
+          <td><code>am_ext__feature_flags</code></td>
+          <td>Boolean toggles (e.g., useProxy, useMangadex, skipLinkChecks)</td>
+          <td>Persist user-configured workflow settings</td>
+          <td>Until user resets or uninstalls</td>
+        </tr>
+        <tr>
+          <td><code>am_ext__panel_settings</code></td>
+          <td>Panel dimension preferences</td>
+          <td>Persist user-configured panel dimensions</td>
+          <td>Until user resets or uninstalls</td>
+        </tr>
+        <tr>
+          <td><code>am_ext__lib_mirror_urls_by_title_v1</code></td>
+          <td>Per-title list of mirror source URLs (user-entered)</td>
+          <td>Remember which source mirrors the user linked to a specific manga title</td>
+          <td>Until user clears or uninstalls</td>
+        </tr>
+        <tr>
+          <td><code>am_ext__am_spididy_dispatcher_v1</code></td>
+          <td>An extension authentication key (<code>ext_key</code>)</td>
+          <td>Authenticate requests to the internal Spididy proxy API used by the team</td>
+          <td>Until user signs out or uninstalls</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      None of these values contain personally identifiable information (PII) such as names,
+      email addresses, passwords, or financial data. The authentication key is an opaque
+      machine-generated token associated with the extension installation, not with a natural person.
+    </p>
+
+    <h2>2.2 Network requests made by the Extension <span class="badge">Read-only / Public data</span></h2>
+    <p>
+      To populate manga metadata fields, the Extension makes outbound HTTP GET requests to
+      the following categories of third-party services. These are read-only requests to
+      <strong>publicly accessible</strong> catalog APIs and web pages:
+    </p>
+    <ul>
+      <li><strong>Manga aggregators</strong> — MangaLib, HentaiLib, SlashLib, ShLib (api.cdnlibs.org, hapi.hentaicdn.org)</li>
+      <li><strong>International databases</strong> — MangaDex (api.mangadex.org), MangaUpdates (mangaupdates.com)</li>
+      <li><strong>Anime/manga metadata</strong> — Shikimori (shikimori.one / shikimori.me), MyAnimeList (myanimelist.net), Kitsu (kitsu.io), Anime-Planet (anime-planet.com)</li>
+      <li><strong>Russian aggregators</strong> — Remanga (remanga.org), ReadManga, MintManga, NewManga, Senkuro, Inkstory, MangaBuff</li>
+      <li><strong>Astra Manga internal API</strong> — internal.astramanga.org, api.astramanga.org</li>
+      <li><strong>Spididy proxy</strong> — impidoras-spididy.waw0.amvera.tech (internal team proxy, used only for requests to MangaDex and MangaUpdates)</li>
+    </ul>
+    <p>
+      The Extension does <strong>not</strong> send user browsing history, form data, or any
+      personal information to these endpoints. Requests contain only the URL being fetched
+      and standard HTTP headers (Accept, User-Agent). The authentication key described in
+      §2.1 is sent only to Astra-owned endpoints (astramanga.org and spididy.waw0.amvera.tech).
+    </p>
+
+    <h2>3. Why Each Permission Is Required</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Reason</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>storage</code></td>
+          <td>Persist panel state, feature flags, and source URLs in <code>chrome.storage.local</code></td>
+        </tr>
+        <tr>
+          <td><code>tabs</code></td>
+          <td>Detect existing MangaLib/HentaiLib browser tabs to execute authenticated fetch requests for manga data that requires a logged-in session (read-only; tab content is not recorded)</td>
+        </tr>
+        <tr>
+          <td><code>scripting</code></td>
+          <td>Inject a fetch function into an existing manga library tab to retrieve API responses that require session cookies (the result is returned to the admin page; no user data is retained or transmitted elsewhere)</td>
+        </tr>
+        <tr>
+          <td>Host permissions (astramanga.org, mangadex.org, etc.)</td>
+          <td>Required by Manifest V3 to make cross-origin requests from the background service worker to the external catalog APIs listed in §2.2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Data Sharing &amp; Third Parties</h2>
+    <p>
+      The Extension does <strong>not</strong> share, sell, license, or otherwise disclose
+      any user data to third parties. The only outbound traffic the Extension generates
+      consists of read-only requests to public manga APIs, as described in §2.2.
+    </p>
+    <p>
+      The Extension does not include any analytics SDK, advertising network, crash-reporting
+      service, or any other third-party tracking library.
+    </p>
+
+    <h2>5. Data Security</h2>
+    <p>
+      All data processed by the Extension remains on the user's local machine inside the
+      browser's sandboxed storage. The Extension communicates with Astra-owned endpoints
+      over HTTPS. No data is stored on any remote server operated by the Extension author.
+    </p>
+    <p>
+      The authentication key is stored only in <code>chrome.storage.local</code>, which is
+      accessible only to this Extension and cannot be read by web pages or other extensions.
+    </p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>
+      The Extension is intended solely for use by adult professional staff (content moderators
+      and administrators) of the Astra Manga platform. It is not directed at, and does not
+      knowingly collect information from, children under the age of 13.
+    </p>
+
+    <h2>7. Changes to This Privacy Policy</h2>
+    <p>
+      If the Extension's data practices change materially, this page will be updated and the
+      "Last updated" date at the top will reflect the revision date. Continued use of the
+      Extension after any update constitutes acceptance of the revised policy.
+    </p>
+
+    <h2>8. Contact</h2>
+    <p>
+      Questions or concerns regarding this privacy policy may be directed to the developer
+      via email: <a href="mailto:vladvasilebsk@gmail.com">vladvasilebsk@gmail.com</a>.
+    </p>
+
+    <footer>
+      &copy; 2025 Astra Manga / SPIDIKSY &nbsp;·&nbsp; Astra Admin Helper Pro &nbsp;·&nbsp;
+      <a href="https://github.com/SPIDIKSY/astra-admin-helper" target="_blank">GitHub</a>
+    </footer>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       RUSSIAN VERSION
+  ══════════════════════════════════════ -->
+  <div data-lang="ru">
+
+    <h1>Политика конфиденциальности</h1>
+    <div class="meta">
+      <strong>Astra Admin Helper Pro</strong> &nbsp;·&nbsp;
+      ID расширения: <code>ofdiekkomjacbkaeoommjffdnglndhkg</code> &nbsp;·&nbsp;
+      Последнее обновление: 19 мая 2025 г.
+    </div>
+
+    <h2>1. Общие сведения</h2>
+    <p>
+      Astra Admin Helper Pro («Расширение») — браузерное расширение, предназначенное исключительно
+      для внутреннего использования авторизованными модераторами и администраторами платформы
+      <strong>Astra Manga</strong> (<a href="https://astramanga.org" target="_blank">astramanga.org</a>).
+      Цель расширения — автоматизация рутинных задач модерации: автозаполнение полей метаданных манги,
+      парсинг публичных данных с сайтов-агрегаторов, а также применение внутренних редакционных правил.
+    </p>
+    <div class="highlight">
+      ✔ Расширение <strong>не собирает, не передаёт, не продаёт и не раскрывает</strong> никакие
+      персональные данные пользователей. Все данные, с которыми оно работает, — это либо публичная
+      информация из каталогов манги, либо локальные операционные настройки.
+    </div>
+
+    <h2>2. Собираемые данные и их использование</h2>
+
+    <h2>2.1 Данные, хранящиеся локально на устройстве <span class="badge">Только локально</span></h2>
+    <p>
+      Расширение хранит перечисленные ниже данные исключительно в
+      <code>chrome.storage.local</code> (с резервным вариантом через <code>localStorage</code>).
+      Эти данные <strong>никогда не покидают ваше устройство</strong> и не передаются ни на какие серверы.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Ключ</th>
+          <th>Содержимое</th>
+          <th>Назначение</th>
+          <th>Срок хранения</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>am_ext__panel_state</code></td>
+          <td>Ширина, высота, масштаб и состояние (свёрнута/развёрнута) панели</td>
+          <td>Восстановление положения и размера панели при перезагрузке страницы</td>
+          <td>До сброса настроек или удаления расширения</td>
+        </tr>
+        <tr>
+          <td><code>am_ext__feature_flags</code></td>
+          <td>Флаги-переключатели (useProxy, useMangadex, skipLinkChecks и др.)</td>
+          <td>Сохранение пользовательских настроек рабочего процесса</td>
+          <td>До сброса настроек или удаления расширения</td>
+        </tr>
+        <tr>
+          <td><code>am_ext__panel_settings</code></td>
+          <td>Предпочтения размеров панели</td>
+          <td>Сохранение пользовательских настроек размеров панели</td>
+          <td>До сброса настроек или удаления расширения</td>
+        </tr>
+        <tr>
+          <td><code>am_ext__lib_mirror_urls_by_title_v1</code></td>
+          <td>Список URL-зеркал источников для каждого тайтла (вводятся пользователем)</td>
+          <td>Запоминание, какие зеркала пользователь привязал к конкретному тайтлу манги</td>
+          <td>До очистки или удаления расширения</td>
+        </tr>
+        <tr>
+          <td><code>am_ext__am_spididy_dispatcher_v1</code></td>
+          <td>Ключ аутентификации расширения (<code>ext_key</code>)</td>
+          <td>Аутентификация запросов к внутреннему прокси-API Spididy, используемому командой</td>
+          <td>До выхода из системы или удаления расширения</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Ни одно из этих значений не содержит персональных данных (имён, адресов электронной почты,
+      паролей, финансовой информации). Ключ аутентификации — это непрозрачный машинно-генерируемый
+      токен, связанный с установкой расширения, а не с конкретным человеком.
+    </p>
+
+    <h2>2.2 Сетевые запросы расширения <span class="badge">Только чтение / публичные данные</span></h2>
+    <p>
+      Для заполнения полей метаданных манги расширение выполняет исходящие HTTP GET-запросы
+      к следующим категориям сторонних сервисов. Это запросы только на чтение к
+      <strong>публично доступным</strong> API каталогов и веб-страницам:
+    </p>
+    <ul>
+      <li><strong>Агрегаторы манги</strong> — MangaLib, HentaiLib, SlashLib, ShLib (api.cdnlibs.org, hapi.hentaicdn.org)</li>
+      <li><strong>Международные базы данных</strong> — MangaDex (api.mangadex.org), MangaUpdates (mangaupdates.com)</li>
+      <li><strong>Метаданные аниме/манги</strong> — Shikimori (shikimori.one / shikimori.me), MyAnimeList (myanimelist.net), Kitsu (kitsu.io), Anime-Planet (anime-planet.com)</li>
+      <li><strong>Российские агрегаторы</strong> — Remanga (remanga.org), ReadManga, MintManga, NewManga, Senkuro, Inkstory, MangaBuff</li>
+      <li><strong>Внутренний API Astra Manga</strong> — internal.astramanga.org, api.astramanga.org</li>
+      <li><strong>Прокси Spididy</strong> — impidoras-spididy.waw0.amvera.tech (внутренний командный прокси, используется только для запросов к MangaDex и MangaUpdates)</li>
+    </ul>
+    <p>
+      Расширение <strong>не передаёт</strong> историю посещений, данные форм или какую-либо
+      персональную информацию этим сервисам. Запросы содержат только запрашиваемый URL
+      и стандартные HTTP-заголовки (Accept, User-Agent). Ключ аутентификации, описанный
+      в п. 2.1, передаётся только на серверы Astra (astramanga.org и spididy.waw0.amvera.tech).
+    </p>
+
+    <h2>3. Зачем нужны каждое из разрешений</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Разрешение</th>
+          <th>Причина</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>storage</code></td>
+          <td>Сохранение состояния панели, флагов и URL источников в <code>chrome.storage.local</code></td>
+        </tr>
+        <tr>
+          <td><code>tabs</code></td>
+          <td>Обнаружение открытых вкладок MangaLib/HentaiLib для выполнения аутентифицированных запросов к данным манги, требующим активной сессии (только чтение; содержимое вкладок не записывается)</td>
+        </tr>
+        <tr>
+          <td><code>scripting</code></td>
+          <td>Внедрение функции fetch в открытую вкладку библиотеки манги для получения ответов API, требующих сессионных cookie (результат возвращается на страницу администратора; пользовательские данные не сохраняются и не передаются куда-либо ещё)</td>
+        </tr>
+        <tr>
+          <td>Host permissions (astramanga.org, mangadex.org и др.)</td>
+          <td>Требуется Manifest V3 для выполнения кросс-доменных запросов из фонового сервис-воркера к внешним API каталогов, перечисленным в п. 2.2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Передача данных третьим лицам</h2>
+    <p>
+      Расширение <strong>не передаёт, не продаёт, не лицензирует и не раскрывает</strong>
+      никакие пользовательские данные третьим лицам. Единственный исходящий трафик
+      расширения — это запросы только на чтение к публичным API манги, описанные в п. 2.2.
+    </p>
+    <p>
+      Расширение не содержит никакого аналитического SDK, рекламных сетей, сервисов
+      отчётов об ошибках или иных сторонних библиотек отслеживания.
+    </p>
+
+    <h2>5. Безопасность данных</h2>
+    <p>
+      Все данные, обрабатываемые расширением, остаются на локальном устройстве пользователя
+      в изолированном хранилище браузера. Расширение взаимодействует с серверами Astra
+      исключительно по протоколу HTTPS. Никакие данные не хранятся на удалённых серверах,
+      управляемых автором расширения.
+    </p>
+    <p>
+      Ключ аутентификации хранится только в <code>chrome.storage.local</code>, который
+      доступен исключительно данному расширению и не может быть прочитан веб-страницами
+      или другими расширениями.
+    </p>
+
+    <h2>6. Конфиденциальность детей</h2>
+    <p>
+      Расширение предназначено исключительно для использования совершеннолетними
+      сотрудниками (контент-модераторами и администраторами) платформы Astra Manga.
+      Оно не направлено на детей в возрасте до 13 лет и не собирает их данные намеренно.
+    </p>
+
+    <h2>7. Изменения настоящей политики</h2>
+    <p>
+      Если практика работы с данными в расширении существенно изменится, эта страница
+      будет обновлена, а дата «Последнего обновления» в верхней части отразит дату
+      изменения. Продолжение использования расширения после обновления означает принятие
+      новой редакции политики.
+    </p>
+
+    <h2>8. Контакты</h2>
+    <p>
+      Вопросы и замечания, касающиеся настоящей политики конфиденциальности, направляйте
+      разработчику на электронную почту: <a href="mailto:vladvasilebsk@gmail.com">vladvasilebsk@gmail.com</a>.
+    </p>
+
+    <footer>
+      &copy; 2025 Astra Manga / SPIDIKSY &nbsp;·&nbsp; Astra Admin Helper Pro &nbsp;·&nbsp;
+      <a href="https://github.com/SPIDIKSY/astra-admin-helper" target="_blank">GitHub</a>
+    </footer>
+  </div>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('active', el.dataset.lang === lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.id === 'btn-' + lang);
+    });
+    // Update html lang attribute for accessibility
+    document.documentElement.lang = lang;
+  }
+
+  // Auto-detect browser language on load
+  const browserLang = (navigator.language || '').toLowerCase();
+  if (browserLang.startsWith('ru')) setLang('ru');
+</script>
+</body>
+</html>
